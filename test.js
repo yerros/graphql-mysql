@@ -1,18 +1,18 @@
 const faker = require("faker");
 
-function generateUser() {
+function generatePost() {
   let users = [];
 
   for (let id = 1; id < 10; id++) {
-    let firstName = faker.name.firstName();
-    let lastName = faker.name.lastName();
-    let email = faker.internet.email();
+    let title = faker.lorem.words(5);
+    let desciption = faker.lorem.paragraph();
+    let userId = Math.floor(Math.random() * 100);
 
     users.push({
       id,
-      firstName,
-      lastName,
-      email,
+      title,
+      desciption,
+      userId,
       createdAt: new Date(),
       updatedAt: new Date()
     });
